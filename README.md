@@ -1,6 +1,6 @@
 # Cedar Lab RAG challenge
 
-PS05 teaching project using only the six fictional handout paragraphs. Participant: Ghaida Aljuhani (confirm name); partner: not specified. See SOLUTION.txt for interpretations and remaining submission steps.
+PS05 teaching project using only the six fictional handout paragraphs. Participants: Ghaida Aljuhani and Mohammad Alnasser. See SOLUTION.txt for interpretations and remaining submission steps.
 
 ## Run
 
