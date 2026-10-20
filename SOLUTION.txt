@@ -1,0 +1,40 @@
+PS05 — Cedar Lab RAG: solution and interpretation
+
+1. Keyword baseline
+Before running, Q1 was predicted to need A1 and A2. Exactly six chunks were loaded with labels and filenames retained as metadata, excluded from search text. The specified stopwords and distinct alphanumeric-word intersection were used without stemming or synonyms.
+
+Q1 ranking: A1=3; A2=2; B1=1; T1=1; T2=1; B2=0. A1 matches 00, graduate, trained. A2 matches laser, trained. The repeated occurrence of a word does not increase its contribution. Ties use ascending ID. Selected evidence A1 and A2 is complete, with coverage 2/2.
+
+2. Real embeddings
+The actual model was sentence-transformers/all-MiniLM-L6-v2 on CPU. Package versions and vector inspection are saved in evidence/. Six documents form a (6, 384) matrix; each question is a (384,) vector. Both must use compatible coordinates from the same model so corresponding components can be compared.
+
+All 384 coordinates were used. Normalization divides each vector by its Euclidean length. The normalized dot product equals cosine similarity within tolerance 1e-6. Sorting descending scores, resolving ties by ID, and taking the first k converts six scores into selected evidence.
+
+Among the coordinates displayed for the six documents and Q1, the minimum was -0.116691455245018 and maximum 0.13567747175693512, both in T1. Neither has a reliable meaning alone; meaning-related relationships are represented collectively. The model was pretrained, not trained on the six paragraphs.
+
+For Q1 and top passage A2, the first twelve coordinate products summed to 0.0161115004; the remaining 372 summed to 0.6703341874; the full sum was 0.6864456878. The retrieval matrix product printed 0.68644559; the small difference reflects float32 versus float64 accumulation of the same stored coordinates, within the verified numerical tolerance. Display rounding was not used for retrieval.
+
+The embedding model selects candidate evidence. A language model subsequently writes an answer. Ordinary RAG changes context, not learned model weights.
+
+3. Retrieval comparison
+Q1: keyword A1, A2; embeddings A2, T1. Keyword required coverage 2/2; embeddings 1/2. A1 ranks fourth for embeddings, so top-2 misses the access-hour condition. Similarity ranks topical alignment; it does not ensure that every required condition is recovered. The exact internal reason for a learned similarity score is not established by the ranking alone.
+
+Q2: keyword A2, B1; embeddings A2, T1. Both recover A2, giving required coverage 1/1. A2's embedding score is 0.58519334. It captures the rule relevant to the paraphrase about another person being present.
+
+Q3: keyword T1, A2; embeddings T1, B1. Both recover T1, giving required coverage 1/1. T1 scores 0.74202740 with embeddings. Keyword also succeeds because laser and must overlap; it does not understand refresh as renewed.
+
+Q4: keyword A2, B1; embeddings T1, A2. No source states a wavelength, so neither method retrieves an answer. Embeddings always return top k in this exercise; even the nearest passages can lack the requested fact. A positive score does not establish answerability. Required coverage is not applicable to absent evidence.
+
+Q1 k experiment:
+k=1: A2; coverage 1/2.
+k=2: A2, T1; coverage 1/2.
+k=3: A2, T1, B1; coverage 1/2.
+Adding T1 adds training conditions; adding B1 adds booking limits. Neither supplies the missing access-hour evidence. Increasing k to three did not make this run complete. Testing a larger k or a combined keyword/embedding retrieval method is a possible future experiment, not a completed experiment reported here.
+
+4. Answer and citation audits
+See evidence/q1-answer-audit.txt and evidence/q4-answer-audit.txt for drafts and claim-by-claim checks. Q1 must preserve the two-person operating condition and explicitly acknowledge that its retrieved passages omit access hours. Q4 must decline to supply a wavelength because no supplied passage states one.
+
+Fresh-chat answer procedure completed by the user, who pasted the actual Q1 and Q4 responses into the working chat. Q1's original answer omitted an explicit access-hours uncertainty statement. One instruction revision fixed that omission; both versions and the revised instruction are preserved. Q4 correctly reported missing wavelength information on its first run and required no revision. Claim-by-claim audits are saved in evidence/.
+
+5. Remaining personal/submission steps
+Write your own reflection, at most 150 words, covering the question-to-citation path, one observed limitation, and one proposed test. Confirm participant/partner names. Upload the repository to your GitHub and enter its URL in the class signup sheet. This local package has not been uploaded or submitted.

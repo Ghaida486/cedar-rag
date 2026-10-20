@@ -1,0 +1,5 @@
+question_id,keyword_top_ids,keyword_scores,embedding_top_ids,embedding_scores,required_ids,keyword_evidence_complete,embedding_evidence_complete,observation
+Q1,A1;A2,3;2,A2;T1,0.68644559;0.58195281,A1;A2,true,false,"Keyword coverage 2/2; embedding coverage 1/2. Embeddings select A2 (0.68644559) and T1 (0.58195281), missing A1 ranked fourth (0.37424892)."
+Q2,A2;B1,2;1,A2;T1,0.58519334;0.43476063,A2,true,true,Both retrieve A2: keyword score 2; embedding similarity 0.58519334. Each has required coverage 1/1; second passages are not required.
+Q3,T1;A2,2;1,T1;B1,0.74202740;0.47119522,T1,true,true,Both retrieve T1: keyword score 2 from laser and must; embedding similarity 0.74202740. Coverage 1/1. Keyword succeeds through overlap despite refresh/renewed and qualification/training paraphrases.
+Q4,A2;B1,1;1,T1;A2,0.34772122;0.32082716,absent,false,false,Required information is absent. Keyword selects A2 and B1 from laser overlap. Embeddings select T1 (0.34772122) and A2 (0.32082716) because top k is mandatory. Neither similarity nor positive overlap establishes answerability; coverage ratio is not applicable.
