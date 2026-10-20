@@ -32,7 +32,7 @@ The evidence judgments and observations in results.csv have been filled in from 
 
 The user completed the two fresh restricted-evidence answer chats and supplied their actual responses. Both answers were audited. Q1 needed one instruction revision to explicitly acknowledge missing access-hour evidence; the original and revised answers are preserved. Q4 passed on its first run. See the answer and audit files in evidence/.
 
-Individual reflection files are reflection.txt (Ghaida Aljuhani) and reflection_mohammad.txt (Mohammad Alnasser), each below 150 words. Each participant must ensure the final text is their own explanation, as required by the handout. Repository: https://github.com/Ghaida486/cedar-rag. Submission to the class signup sheet remains a separate step.
+Individual reflection files are reflection_ghaida.txt (Ghaida Aljuhani) and reflection_mohammad.txt (Mohammad Alnasser), each below 150 words. Each participant must ensure the final text is their own explanation, as required by the handout. Repository: https://github.com/Ghaida486/cedar-rag. Submission to the class signup sheet remains a separate step.
 
 ## Verified environment and actual run
 
