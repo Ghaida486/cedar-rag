@@ -1,3 +1,3 @@
-Reflection draft — AI-assisted; review and personalize before submission.
+
 
 A question becomes a cited answer by first retrieving relevant passages. The embedding model converts the question and passages into vectors, and similarity scores determine which passages are selected. A language model then uses those passages to write an answer with citations. One limitation we observed was that Q1’s embedding search retrieved A2 and T1 but missed A1, which contained the access hours. Increasing k to three still missed A1, so retrieving more passages did not guarantee complete evidence. Next, I would test combining keyword and embedding retrieval, because keyword retrieval found both required passages for Q1. I would compare whether this improves evidence coverage across all four questions.
