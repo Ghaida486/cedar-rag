@@ -32,9 +32,9 @@ k=3: A2, T1, B1; coverage 1/2.
 Adding T1 adds training conditions; adding B1 adds booking limits. Neither supplies the missing access-hour evidence. Increasing k to three did not make this run complete. Testing a larger k or a combined keyword/embedding retrieval method is a possible future experiment, not a completed experiment reported here.
 
 4. Answer and citation audits
-See evidence/q1-answer-audit.txt and evidence/q4-answer-audit.txt for drafts and claim-by-claim checks. Q1 must preserve the two-person operating condition and explicitly acknowledge that its retrieved passages omit access hours. Q4 must decline to supply a wavelength because no supplied passage states one.
+See evidence/q1-answer-audit.txt and evidence/q4-answer-audit.txt for the recorded answers and claim-by-claim checks. Q1 must preserve the two-person operating condition and explicitly acknowledge that its retrieved passages omit access hours. Q4 must decline to supply a wavelength because no supplied passage states one.
 
 Fresh-chat answer procedure completed by the user, who pasted the actual Q1 and Q4 responses into the working chat. Q1's original answer omitted an explicit access-hours uncertainty statement. One instruction revision fixed that omission; both versions and the revised instruction are preserved. Q4 correctly reported missing wavelength information on its first run and required no revision. Claim-by-claim audits are saved in evidence/.
 
-5. Remaining personal/submission steps
-Write your own reflection, at most 150 words, covering the question-to-citation path, one observed limitation, and one proposed test. Confirm participant/partner names. Upload the repository to your GitHub and enter its URL in the class signup sheet. This local package has not been uploaded or submitted.
+5. Submission status
+Participants: Ghaida Aljuhani and Mohammad Alnasser. Code, sources, actual run evidence, results, answer audits and two reflection files are uploaded to https://github.com/Ghaida486/cedar-rag. The README maps every rubric category to its supporting files. Each participant must ensure their reflection is their own individual explanation. The repository link must still be submitted to the class signup sheet; GitHub upload alone does not complete that submission.
