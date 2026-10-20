@@ -1,0 +1,7 @@
+Python: 3.14.7
+Platform: macOS-27.0-arm64-arm-64bit-Mach-O
+Device requested: cpu
+sentence-transformers: 6.1.0
+numpy: 2.5.4
+torch: 2.14.1
+transformers: 5.20.2

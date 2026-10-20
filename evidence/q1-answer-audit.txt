@@ -1,0 +1,17 @@
+Q1 original answer audit
+Provenance: Actual answer pasted by the user after the fresh-chat instructions. See q1-answer-original.txt for the preserved original.
+
+Two trained people during operation: supported by A2.
+Solo operation at 19:00 violates that requirement: supported by the unconditional operating requirement in A2.
+No exception in supplied text for graduate students or 19:00: accurate observation about the supplied passages.
+Current record and 12-month renewal: supported by T1.
+Student's actual training status: correctly marked unestablished; not asserted as fact.
+
+Incomplete missing-evidence disclosure: The answer does not explicitly acknowledge that the actual general access hours are absent, so it cannot determine whether 19:00 is within those hours. This is required by the assignment's Q1 audit. The no-solo-operation conclusion remains supported.
+
+Next: Revise the instruction once to request explicit missing access-hours disclosure; rerun with identical A2 and T1 passages, preserve the revised output, and assess whether it fixes the omission. Completed; see q1-answer-revised.txt and q1-instruction-revision.txt.
+
+Revised answer audit:
+The two-person operating rule and applicability during general access hours are supported by A2. The current-record and 12-month renewal conditions are supported by T1. The revision explicitly leaves general access hours, the status of 19:00 within those hours, and the student's current training status unestablished. It imports no actual access-hour values from A1. No unsupported factual assertions were identified. The A2 citation supports the unconditional operating requirement; missing-hours disclosure is verified by inspecting both supplied passages.
+
+Outcome: The single instruction revision helped: it fixed the original omission while preserving the supported conclusion and training conditions. Original and revised answers are both retained.

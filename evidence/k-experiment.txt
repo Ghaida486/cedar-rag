@@ -1,0 +1,54 @@
+
+Question: May a trained graduate student operate the laser alone at 19:00?
+k: 1
+Query shape: (384,)
+Query first12: 0.0485 0.0060 -0.0148 -0.0017 -0.0642 -0.0427 0.0008 -0.0575 -0.0771 -0.0306 0.0749 0.0967 length: 1.00000000
+Dot products agree with direct cosine within tolerance 1e-6.
+A2 score=0.68644559
+T1 score=0.58195281
+B1 score=0.53269601
+A1 score=0.37424892
+T2 score=0.27045220
+B2 score=0.12873961
+Selected: A2
+[A2] access.txt
+The laser room requires two trained people to be present whenever the laser is operating, including during general laboratory access hours.
+Required evidence coverage: 1/2; complete: False
+
+Question: May a trained graduate student operate the laser alone at 19:00?
+k: 2
+Query shape: (384,)
+Query first12: 0.0485 0.0060 -0.0148 -0.0017 -0.0642 -0.0427 0.0008 -0.0575 -0.0771 -0.0306 0.0749 0.0967 length: 1.00000000
+Dot products agree with direct cosine within tolerance 1e-6.
+A2 score=0.68644559
+T1 score=0.58195281
+B1 score=0.53269601
+A1 score=0.37424892
+T2 score=0.27045220
+B2 score=0.12873961
+Selected: A2, T1
+[A2] access.txt
+The laser room requires two trained people to be present whenever the laser is operating, including during general laboratory access hours.
+[T1] training.txt
+Laser training must be renewed every 12 months. A current training record is required before operating the laser.
+Required evidence coverage: 1/2; complete: False
+
+Question: May a trained graduate student operate the laser alone at 19:00?
+k: 3
+Query shape: (384,)
+Query first12: 0.0485 0.0060 -0.0148 -0.0017 -0.0642 -0.0427 0.0008 -0.0575 -0.0771 -0.0306 0.0749 0.0967 length: 1.00000000
+Dot products agree with direct cosine within tolerance 1e-6.
+A2 score=0.68644559
+T1 score=0.58195281
+B1 score=0.53269601
+A1 score=0.37424892
+T2 score=0.27045220
+B2 score=0.12873961
+Selected: A2, T1, B1
+[A2] access.txt
+The laser room requires two trained people to be present whenever the laser is operating, including during general laboratory access hours.
+[T1] training.txt
+Laser training must be renewed every 12 months. A current training record is required before operating the laser.
+[B1] booking.txt
+Laser room bookings are limited to two hours per session. Reserve the room through the equipment calendar.
+Required evidence coverage: 1/2; complete: False

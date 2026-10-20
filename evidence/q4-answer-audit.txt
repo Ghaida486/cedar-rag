@@ -1,0 +1,13 @@
+Q4 answer audit
+Provenance: Actual answer pasted by the user after the fresh-chat instructions. The supplied passages were T1 and A2, the actual embedding top-2 results. See q4-answer-original.txt for the preserved response.
+
+Claim: T1 describes training requirements.
+Support: T1 states 12-month renewal and a current training record before operation. Supported.
+
+Claim: A2 describes staffing requirements.
+Support: A2 requires two trained people during laser operation. Supported.
+
+Claim: Neither passage provides the wavelength.
+Support: Inspection of both supplied passages confirms no wavelength is specified. Supported as a statement about the supplied evidence.
+
+Conclusion: The wavelength cannot be determined from the supplied passages. Correct missing-information response. No wavelength value, outside fact, or invented citation appears. No unsupported factual claims identified. No instruction revision was needed.

@@ -1,0 +1,7 @@
+Pre-run evidence prediction for Q1: A1 and A2.
+Actual selected IDs: A1, A2.
+A1 score 3: 00, graduate, trained.
+A2 score 2: laser, trained.
+All six labeled source paragraphs are stored in the three named files; IDs and filenames are separate from searchable text.
+Verified unique IDs, repeated-word invariance and no-match scoring.
+No answer was generated during Task 1.
